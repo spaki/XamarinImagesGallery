@@ -1,2 +1,2 @@
 # XamarinImagesGallery
-Xamarin Image Gallery Sample, with grid, and carousel viewer
+Xamarin Forms Image Gallery Sample, with grid, and carousel viewer

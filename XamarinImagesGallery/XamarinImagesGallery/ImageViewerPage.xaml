@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             x:Class="XamarinImagesGallery.ImageViewerPage"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <cards:CardsView x:Name="imageViewer">
+            <cards:CardsView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <Frame 
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Padding="10" 
+                            HasShadow="false"
+                            IsClippedToBounds="true"
+                            CornerRadius="10"
+                            BackgroundColor="Black">
+                            <Image Source="{Binding}"/>
+                        </Frame>
+                    </ContentView>
+                </DataTemplate>
+            </cards:CardsView.ItemTemplate>
+        </cards:CardsView>
+    </ContentPage.Content>
+</ContentPage>

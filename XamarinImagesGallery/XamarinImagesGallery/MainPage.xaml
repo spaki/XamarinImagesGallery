@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinImagesGallery"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="XamarinImagesGallery.MainPage">
+    <StackLayout>
+        
+        <Label Text="Images Gallery" FontSize="Large" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+
+        <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false" x:Name="gallery" FlowItemTapped="Gallery_FlowItemTapped" >
+            <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Source="{Binding}" HeightRequest="50" WidthRequest="50"/>
+                    </StackLayout>
+                </DataTemplate>
+            </flv:FlowListView.FlowColumnTemplate>
+        </flv:FlowListView>
+        
+    </StackLayout>
+</ContentPage>
